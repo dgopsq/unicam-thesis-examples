@@ -33,7 +33,7 @@ const AppView = Backbone.View.extend({
       return false;
     }
 
-    bookshelfCollection.add(newBook);
+    bookshelfCollection.add(newBook, { at: 0 });
   },
 
   render: function() {

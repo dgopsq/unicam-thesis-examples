@@ -17,8 +17,7 @@ const BookshelfCollection = Backbone.Collection.extend({
   },
 });
 
-// Creazione e popolazione della collezione
-// esportata come Singleton
+// We need a pre-populated singleton
 const BCInstance = new BookshelfCollection();
 BCInstance.add(bookshelfDb);
 
