@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bookshelf MVC</title>
+</head>
+<body id="app">
+  <div class="c-navbar">
+    <div class="c-navbar__logo">Bookshelf</div>
+  </div>
+  
+  <div class="c-form u-center u-mt1">
+    <div class="c-heading c-heading--2">Add a new book</div>
+
+    <div class="c-inputgroup u-mt3 u-mr3">
+      <label for="book-title" class="c-inputgroup__label">Title</label>
+      <input id="book-title" type="text" class="c-inputgroup__input u-mt4" placeholder="Brave New World">
+    </div>
+
+    <div class="c-inputgroup u-mt3">
+      <label for="book-rating" class="c-inputgroup__label">Author</label>
+      <input id="book-author" type="text" class="c-inputgroup__input u-mt4" placeholder="Aldous Huxley">
+    </div>
+    
+    <div class="u-mt3 u-txright">
+        <button id="book-submit"class="c-button">Add book</button>
+    </div>
+  </div>
+
+  <div class="u-mt1">
+      <div id="js-counter"></div>
+      <div class="c-grid u-mt3" id="js-bookshelf"></div>
+  </div>
+  
+  <footer class="u-mt1"></footer>
+
+  <!-- Templates --> 
+
+  <script type="text/template" id="js-book-template">
+    <div class="c-singlebook__title"><%- title %></div>
+    <div class="c-singlebook__author u-txright u-mt3"><%- author %></div>
+  </script>
+
+  <script type="text/template" id="js-counter-template">
+    You have added <%- count %> books
+  </script>
+
+  <!-- / Templates --> 
+  
+  <script src="dist/app.js"></script>
+</body>
+</html>
