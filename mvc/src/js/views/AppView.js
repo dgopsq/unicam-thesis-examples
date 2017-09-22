@@ -34,6 +34,9 @@ const AppView = Backbone.View.extend({
     }
 
     bookshelfCollection.add(newBook, { at: 0 });
+
+    this.$formtitle.val('');
+    this.$formauthor.val('');
   },
 
   render: function() {
