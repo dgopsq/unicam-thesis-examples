@@ -17,8 +17,15 @@ const BookshelfView = Backbone.View.extend({
   },
 
   createGridItem: function(book) {
-    const container = $('<div>', { class: 'c-grid__item c-faderemove' });
-    const deleteBox = $('<a>', { class: 'c-faderemove__target js-remove', 'data-cid': book.cid });
+    const container = $('<div>', { 
+      'class': 'c-grid__item c-faderemove' 
+    });
+
+    const deleteBox = $('<a>', { 
+      'class': 'c-faderemove__target js-remove', 
+      'data-cid': book.cid 
+    });
+
     const view = new BookView({ model: book });
     
     container.append(view.render().el);
