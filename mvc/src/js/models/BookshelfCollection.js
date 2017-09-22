@@ -1,6 +1,5 @@
 import Backbone from 'backbone';
 import BookModel from './BookModel';
-import dispatcher from '../dispatcher';
 
 import bookshelfDb from '../../../db.json';
 
