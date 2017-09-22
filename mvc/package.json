@@ -1,7 +1,7 @@
 {
   "name": "backbone-bookshelf",
   "version": "1.0.0",
-  "description": "Bookkshelf toy application with Backbone.js",
+  "description": "Bookshelf toy application with Backbone.js",
   "main": "index.js",
   "author": "Diego Pasquali",
   "license": "MIT",
