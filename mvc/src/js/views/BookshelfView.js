@@ -3,7 +3,6 @@ import $ from 'jquery';
 import _ from 'underscore';
 
 import BookView from './BookView';
-import dispatcher from '../dispatcher'
 
 const BookshelfView = Backbone.View.extend({
   el: '#js-bookshelf',
@@ -12,8 +11,8 @@ const BookshelfView = Backbone.View.extend({
     'click .js-remove': 'removeBook'
   },
 
-  initialize: function() {
-    dispatcher.on('updatedBookshelf', this.render.bind(this));
+  initialize: function() {
+    this.listenTo(this.collection, 'update', this.render);
   },
 
   createGridItem: function(book) {

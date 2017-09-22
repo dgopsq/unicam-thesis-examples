@@ -6,15 +6,6 @@ import bookshelfDb from '../../../db.json';
 
 const BookshelfCollection = Backbone.Collection.extend({
   model: BookModel,
-
-  initialize: function() {
-    this.on('update', this.onUpdate);
-  },
-  
-  onUpdate: function(bookshelf) {
-    // Dispatch a global event
-    dispatcher.trigger('updatedBookshelf', bookshelf);
-  },
 });
 
 // We need a pre-populated singleton
