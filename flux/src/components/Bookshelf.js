@@ -35,7 +35,9 @@ class Bookshelf extends React.Component {
         </div>
 
         <div className="u-mt3">
-          <BooksGrid onRemoveBook={this._handleRemoveBook} books={this.state.books} />
+          <BooksGrid
+            onRemoveBook={this._handleRemoveBook}
+            books={this.state.books} />
         </div>
 
         <footer className="u-mt1"></footer>
