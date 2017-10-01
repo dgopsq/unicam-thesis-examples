@@ -6,6 +6,7 @@ import AppCSS from './css/app.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 
 import Bookshelf from './components/Bookshelf';
 import bookshelfReducer from './data/bookshelfReducer';
@@ -21,6 +22,8 @@ let store = createStore(
 );
 
 ReactDOM.render(
-  <Bookshelf store={store} />,
+  <Provider store={store}>
+    <Bookshelf />
+  </Provider>,
   document.getElementById('app')
 );
